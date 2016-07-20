@@ -14,8 +14,7 @@
 		<style type="text/css">
 			#forgetPws .login .mui-table .left {
 				width: 31%;
-			}   
-			
+			}    
 			#forgetPws .login .mui-table .right {
 				width: 69%;
 			}
@@ -25,7 +24,7 @@
 	<body style="">
 
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style=""></a>
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" onclick="muiOpenPage('../login/login.html')"  style=""></a>
 			<h1 class="mui-title" style="">忘记密码</h1>
 		</header>
 		<div id="forgetPws" class="mui-content" style=" ">
@@ -36,7 +35,7 @@
 							<div class="box mui-ellipsis" style=""><span style="">&nbsp;手机号</span></div>
 						</div>
 						<div class="right " style="">
-							<input type="tel" style="" name="" id="" value="" placeholder="请输入手机号" />
+							<input class="phone" type="tel" style="" name="" id="" value="" placeholder="请输入手机号" />
 						</div>
 					</div>
 				</div>
@@ -46,8 +45,8 @@
 							<div class="box mui-ellipsis" style=""><span style="">&nbsp;验证码</span></div>
 						</div>
 						<div class="right" style="position: relative; ">
-							<input type="text" name="" id="" value="" placeholder="请输入验证码" />
-							<button type="button postMsg" style="position: absolute;right: 0px;top:0px;background: #4361A7;color: white;height: 30px;line-height: 5px;border-radius:3px ;border: 0px;" class="mui-btn mui-btn-warning mui-btn-outlined">
+							<input type="text" class="yzm" name="" id="" value="" placeholder="请输入验证码" />
+							<button type="button postMsg" id="getYZM" onclick="getYzmMsg()" style="position: absolute;right: 0px;top:0px;background: #4361A7;color: white;height: 30px;line-height: 5px;border-radius:3px ;border: 0px;" class="mui-btn mui-btn-warning mui-btn-outlined">
 										发送短信
 									</button>
 						</div>
@@ -59,7 +58,7 @@
 							<div class="box mui-ellipsis" style=""><span style="">&nbsp;新密码</span></div>
 						</div>
 						<div class="right " style="">
-							<input type="tel" style="" name="" id="" value="" placeholder="请输入新密码" />
+							<input type="password" class="newPsd" style="" name="" id="" value="" placeholder="请输入新密码" />
 						</div>
 					</div>
 				</div>
@@ -69,7 +68,7 @@
 							<div class="box mui-ellipsis" style=""><span style="">&nbsp;确认密码</span></div>
 						</div>
 						<div class="right " style="">
-							<input type="tel" style="" name="" id="" value="" placeholder="请输入新密码" />
+							<input type="password" class="okPsd" style="" name="" id="" value="" placeholder="请输入新密码" />
 						</div>
 					</div>
 				</div>
@@ -81,7 +80,7 @@
 					<div class="mui-table-cell mui-col-xs-12 lineCenter " style="color: #CDCDCD;font-size: 16px;font-weight: bold;">
 
 						<div class="row clickLogin" style="">
-							<button style="" type="button" class="mui-btn mui-btn-block">提交</button>
+							<button onclick="submit()" style="" type="button" class="mui-btn mui-btn-block">提交</button>
 
 						</div>
 
@@ -91,13 +90,120 @@
 		</div>
 		<script src="../public/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../public/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/jquery/jQuery.md5.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/public.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			mui.ready(function() {
 				mui.init({
 					swipeBack: false
 				});
+				//load.start();  
 			})
-
+			//获取验证码
+			function getYzmMsg(){
+				if(!$('.phone').val()){
+					mui.toast('手机号不能为空!');
+					return;
+				}
+				if(!CCphoneTest($('.phone').val())){ 
+					mui.toast('手机号错误!');
+					return;
+				}				
+		        $.ajax({
+		            url: requestURL+'yyxc/Sms/SendSms',
+		            type: "POST",
+		            data: {
+		                phone: $('.phone').val(),
+		                send_type:2
+		            },
+		            dataType: "json",
+		            success: function (data) {   
+		            	console.log(JSON.stringify(data)); 
+		                if (data.res.res_status=='200') { 
+		                	mui.toast('发送成功 ');
+		              		YZMbtnChange('get');  
+		                } else {   
+		                     mui.toast(data.res.res_msg);
+		                } 
+		            },
+		            error: function (data) {
+		                mui.toast('出错啦，请稍后再试！')
+		            }
+		        })  				
+			}
+			function submit(){ 
+				if(!$('.phone').val()){
+					mui.toast('手机号不能为空!');
+					return;
+				}
+				if(!CCphoneTest($('.phone').val())){ 
+					mui.toast('手机号错误!');
+					return;
+				}					
+				if(!$('.yzm').val()){
+					mui.toast('验证码不能为空!');
+					return;
+				}	
+				if(!YZMclick){
+					mui.toast('请发送验证码!');
+					return;					
+				}
+				if(!$('.newPsd').val()){
+					mui.toast('密码不能为空!');
+					return;
+				}					
+				if($('.okPsd').val()!=$('.newPsd').val()){
+					mui.toast('俩次密码输入不一致!');
+					return;
+				}	 
+				load.start();    
+		        $.ajax({
+		            url: requestURL+'yyxc/Student/ForgetPwd', 
+		            type: "POST",
+		            data: {
+		                phone: $('.phone').val(),
+		                pwd: $.md5($('.okPsd').val()).toUpperCase(),
+		                code:$('.yzm').val()
+		            },
+		            dataType: "json",
+		            success: function (data) {   
+		            	console.log(JSON.stringify(data)); 
+		                if (data.res.res_status=='200') {
+		                	muiOpenPage('login.html');
+		                	mui.toast('修改成功 ');
+		              		load.stop(); 
+		                } else {   
+		                     mui.toast(data.res.res_msg);
+		                } 
+		            },
+		            error: function (data) {
+		                mui.toast('出错啦，请稍后再试！')
+		            }
+		        })  				
+			}			
+				// 验证码按钮变化计时
+			var YZMi = 0;
+			var isCanClick = true 
+			var YZMclick = false;
+			function YZMbtnChange(state) {
+				if(state == 'get') {
+					YZMclick = true;
+					$('#getYZM').css('pointer-events', 'none').css('background', '#A4A4A4');
+					if(YZMi != 60) {
+						isCanClick = false;
+						YZMi++;
+						$('#getYZM').text((60 - YZMi) + 's再发送 ');
+						setTimeout(function() {
+							YZMbtnChange('get')
+						}, 1000)
+					} else {
+						$('#getYZM').css('pointer-events', 'auto').css('background', '#4361A7');
+						$('#getYZM').text('发送短信');
+						YZMi = 0;  
+						isCanClick = true; 
+					}
+				}
+			} 
 			function muiOpenPage(url) {
 				mui.openWindow({
 					url: url

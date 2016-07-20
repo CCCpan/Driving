@@ -180,13 +180,8 @@
 		zoom.onTouchstart = function(e) {
 			e.preventDefault();
 			imageIsTouched = true;
-			try
-			{ 
-				imageTouchesStart.x = e.type === $.EVENT_START ? e.targetTouches[0].pageX : e.pageX;
-				imageTouchesStart.y = e.type === $.EVENT_START ? e.targetTouches[0].pageY : e.pageY;
-			}
-			catch(err){}
-			
+			imageTouchesStart.x = e.type === $.EVENT_START ? e.targetTouches[0].pageX : e.pageX;
+			imageTouchesStart.y = e.type === $.EVENT_START ? e.targetTouches[0].pageY : e.pageY;
 		};
 		zoom.onTouchMove = function(e) {
 			e.preventDefault();
@@ -259,14 +254,9 @@
 			zoom.scrollerTransform(imageCurrentX, imageCurrentY);
 		};
 		zoom.onTouchEnd = function(e) {
-			try
-			{ 
-				if (!e.touches.length) {
-					isGesturing = false;
-				}
+			if (!e.touches.length) {
+				isGesturing = false;
 			}
-			catch(err){}			
-
 			if (!imageIsTouched || !imageIsMoved) {
 				imageIsTouched = false;
 				imageIsMoved = false;

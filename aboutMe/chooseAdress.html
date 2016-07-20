@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="feedback">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>驾考学霸</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../public/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../public/public.css" />
+		<link rel="stylesheet" type="text/css" href="../public/fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/addDryGoods.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+			}
+			
+			body,
+			.mui-content {
+				background: #F2F2F2;
+			}
+			
+			#list li {
+				height: 50px;
+			}
+			
+			#list li .mui-navigate-right:after {
+				font-size: 22px;
+				color: #A0A0A0;
+			}
+			
+			.img.xianshi {
+				left: 12px;
+				height: 20px;
+				width: 20px;
+			}
+			
+			#list .mui-navigate-right {
+				margin-left: 15px !important;
+				margin-top: -6px;
+				font-size: 16px;
+			}
+			
+			.mui-table-view-cell:after {
+				left: 10px !important;
+				right: 10px !important;
+			}
+			
+			.red_point {
+				height: 12px;
+				width: 12px !important;
+				background: #ED4E54;
+				border-radius: 50%;
+				position: absolute;
+				right: 40px;
+				top: 20px;
+				padding: 0px !important;
+			}
+			
+			.Userline1 {
+				padding-top: 15px;
+				text-align: center !important;
+			}
+			
+			.Userline1 img {
+				height: 62px;
+				width: 62px;
+				border-radius: 50%;
+				margin: 0 auto !important;
+			}
+			
+			.Userline2 {
+				text-align: center !important;
+				font-size: 12px;
+				color: #9B9B9B;
+			}
+			
+			.Userline3 {
+				font-size: 12px;
+				color: white;
+				text-align: center !important;
+				padding-top: 5px;
+			}
+			
+			.sbmit button {
+				background: #4361A7;
+				border: #4361A7;
+				margin-top: 100px;
+			}
+			
+			.list .box .title {
+				color: #9C9C9C;
+				font-size: 15px;
+				padding: 3px 10px 6px 10px;
+			}
+			
+			.line1 {
+				background: white;
+				clear: both;
+			}
+			
+			.line1 .content {
+				height: 50px;
+				margin: 0 10px 0 10px;
+				border-bottom: 1px solid #CDCDCD;
+			}
+			
+			.line1 .content .left {
+				float: left;
+				width: 75%;
+				height: 50px;
+				line-height: 50px;
+				color: #4C4C4C;
+				font-size: 15px;
+			}
+			
+			.line1 .content .right {
+				float: left;
+				width: 25%;
+				display: block;
+				position: relative;
+			}
+			
+			.line1 .content .right img {
+				height: 15px;
+				position: absolute;
+				right: 10px;
+				top: 18px;
+			}
+			
+			.lastcontent {
+				border-bottom: 0px !important;
+			}
+			
+			.mui-content {
+				height: 100%;
+				background: #F2F2F2 !important;
+				margin-top: 0px;
+			}
+			
+			#add {
+				font-size: 14px;
+				top: 1px;
+				color: #4661A7;
+			}
+		</style>
+	</head>
+
+	<body>    
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" style="margin-top: 0"  onclick="muiOpenPage('setUpUser.html')" ></a>
+			<h1 class="mui-title" style="">选择接送地址</h1> 
+		</header>
+		<div class="mui-content" style=""> 
+			<div class="list">
+			
+				<div class="box">
+					<div class="title" style="">
+						其他
+					</div>
+					<div class="line1" onclick="getValue(this)"  style="">
+						<div class="content lastcontent" style="">
+							<div class="left" style="">
+								贵州名族学园
+							</div>
+							<!---->
+							<div class="right" style="">
+								<img style="" src="../img/CLICK.png" />
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+	
+		</div>
+		<script type="text/javascript" src="js/CCmui.js"></script>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.ready(function() {
+				loadDate()  
+			}) 
+			function getValue(obj){  
+				muiOpenPage('setUpUser.html?address='+$(obj).parent().find('.title').text()+'.'+$(obj).find('.left').text());
+			}
+			function loadDate(){   
+				load.start();
+		        $.ajax({
+		            url: requestURL+'yyxc/Info/address_list',
+		            type: "POST",
+		            dataType: "json",
+		            success: function (data) {   
+		            	console.log(JSON.stringify(data));//return;
+		            	load.stop();
+		                if (data.res.res_status=='200') { 
+		                	var getData = data.res.res_data;console.log(getData.length);
+		                	var html = '';
+		              		for(var i =0 ;i<getData.length;i++){   
+		              			html =html+ '<div class="box">' +'<div class="title" style="">'+getData[i].name;
+		              			console.log(getData[i].son.length);
+									for(var j =0 ;j<getData[i].son.length;j++){
+										html = html+'<div class="line1" onclick="getValue(this)" style=""><div class="content" style="">'
+										html = html+'<div class="left" style="">'+getData[i].son[j].name+'</div><div class="right" style="">'
+										html = html+'<img style="" src="../img/clickEd.png" /></div></div></div>'
+									}
+								html = html+'</div>'+'</div>';  			
+		              		}
+		              		
+		              		$('.list').append(html);
+		              		 
+		                } else {     
+		                     mui.toast(data.res.res_msg); 
+		                } 
+		            },
+		            error: function (data) {
+		                mui.toast('出错啦，请稍后再试！')
+		            }
+		        })  				
+			}		
+		</script>
+	</body>
+
+</html>

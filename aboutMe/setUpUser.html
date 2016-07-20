@@ -11,7 +11,9 @@
 		<link rel="stylesheet" type="text/css" href="../public/public.css" />
 		<link rel="stylesheet" type="text/css" href="../public/fonts/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="css/addDryGoods.css" />
-		<style type="text/css">  
+		<link rel="stylesheet" type="text/css" href="css/login.css" />		
+
+		<style type="text/css">
 			.userZIndex {
 				background: url('../img/user.jpg') no-repeat;
 				background-size: cover;
@@ -22,15 +24,18 @@
 				position: absolute;
 				top: -1px;
 				left: 0px;
-				-webkit-filter: blur(4px)/*//模糊度*/
+				-webkit-filter: blur(3px)/*//模糊度*/
 				saturate(1.5)/*//饱和度*/
 				brightness(1.1)/*亮度*/
 				;
-			} 
+				;
+			}
+			
 			html,
 			body {
 				height: 100%;
-			} 
+			}
+			
 			body,
 			.mui-content {
 				background: #F2F2F2;
@@ -38,27 +43,31 @@
 			
 			#list li {
 				height: 50px;
-			} 
+			}
+			
 			#list li .mui-navigate-right:after {
 				font-size: 22px;
 				color: #A0A0A0;
-			} 
+			}
+			
 			.img.xianshi {
 				left: 12px;
 				height: 20px;
 				width: 20px;
-				left:0px;top: 12px !important;
-			} 
-			#list .mui-navigate-right { 
+			}
+			
+			#list .mui-navigate-right {
+				margin-left: 15px !important;
 				margin-top: -6px;
 				font-size: 16px;
-				margin-left: 0px;padding-left: 35px;
-			} 
+			}
+			
 			.mui-table-view-cell:after {
 				left: 10px !important;
 				right: 10px !important;
-			} 
-			.red_point {  
+			}
+			
+			.red_point {
 				height: 12px;
 				width: 12px !important;
 				background: #ED4E54;
@@ -67,9 +76,10 @@
 				right: 40px;
 				top: 20px;
 				padding: 0px !important;
-			} 
+			}
+			
 			.Userline1 {
-				padding-top: 30px;
+				padding-top: 15px;
 				text-align: center !important;
 			}
 			
@@ -82,25 +92,33 @@
 			
 			.Userline2 {
 				text-align: center !important;
-				font-size: 19px;
-				color: white;
-			} 
+				font-size: 12px;
+				color: #9B9B9B;
+			}
+			
 			.Userline3 {
 				font-size: 12px;
 				color: white;
 				text-align: center !important;
 				padding-top: 5px;
 			}
+			.sbmit button {
+				background: #4361A7;
+				border: #4361A7;
+				margin-top: 100px;
+			}
+
 		</style>
 	</head>
 
 	<body>
-
-		<div class="mui-content" style="">
-
-			<div class="userZIndex" style="height: 160px">
-			</div>
-			<div class="textArea" style="padding-top: 7px;">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left"  style="margin-top: 0;" onclick="muiOpenPage('../index.html?index=2')"  style=""></a>
+			<h1 class="mui-title" style="">个人信息设置</h1>
+			
+		</header>
+		<div class="mui-content" style="height: 100%;background: #F2F2F2 !important;margin-top: 0px;">
+			<div class="textArea" style="height: 110px;margin-bottom: 10px;">
 				<div class="mui-table">
 					<div class="mui-table-cell mui-col-xs-12 Userline1" style="">
 						<input class="addInput" id="imgFile0" type="file" name="File1" accept="image/*" style="display: none;" />
@@ -109,82 +127,46 @@
 				</div>
 				<div class="mui-table ">
 					<div class="mui-table-cell mui-col-xs-12 Userline2" style="">
-						秦详林
+						点击修改
 					</div>
-				</div>
-				<div class="mui-table ">
-					<div class="mui-table-cell mui-col-xs-12 Userline3" style="position: relative">
-						121全日制班手动
-						<div class="right floatRight" style="position: absolute;right: 20px;top: 6px;">考币314</div>
-					</div>
-				</div>
+				</div> 
 			</div>
-			<div class="list" style="">
-				<ul id="list" class="mui-table-view mui-table-view-chevron">
-					<li style="height: 10px;background: #F2F2F2;">&nbsp;</li>
-
-					<li class="mui-table-view-cell" style="" onclick="muiOpenPage('Qrcode .html')">
-						
-						<a class="mui-navigate-right" style="">
-							<img class="img xianshi" style="" src="../img/user3.png" />
-							我的专属二维码
-						</a>
-
-					</li>
-					<li class="mui-table-view-cell" style="" onclick="muiOpenPage('news.html')">
-						 
-						<a class="mui-navigate-right" style="" >
-							<img class="img xianshi" style="" src="../img/user4.png" /> 系统消息  
-						</a>
-						<p class="red_point" style="">  
-
-						</p>
-					</li>
-					<li class="mui-table-view-cell" onclick="muiOpenPage('setUpUser.html')" style="">
-						
-						<a class="mui-navigate-right" style="" >
-						<img class="img xianshi" style="" src="../img/user5.png" />	个人信息修改
-						</a>
-
-					</li>
-					<li class="mui-table-view-cell" style="">
-						
-						<a id="call" class="mui-navigate-right callName" style="">
-							<img class="img xianshi" style="" src="../img/user6.png" />   客服
-						</a>
-						<a class="callClick" href="tel:10086"></a>
-					</li>
-					<li class="mui-table-view-cell" style=""  onclick="muiOpenPage('setUp.html')" >
-						
-						<a class="mui-navigate-right" style="">
-						<img class="img xianshi" style="" src="../img/user7.png" />	设置
-						</a>
-
-					</li>
-
-				</ul>
-				<div class="empt" style="height: 50px;">&nbsp;</div>
-			</div> 
+			<div class="list" >
+				<div class="line1" style="background: white;">
+					<div class="lineCenter" style="height: 40px">
+				 		<div class="left" style="float: left;width: 25%;border-right:1px solid #ECECEC;height: 30px;margin-top: 5px;line-height: 30px;text-align: center;color:#4661A7 ;font-size: 14px;">
+				 			姓名
+				 		</div><!---->
+				 		<div class="" style="float: left;width: 75%;display: block;position: relative;">
+				 			<input type="text"  style="width: 90%;text-align: right;color: #4C4C4C;" value="秦详林"/>
+				 			<img style="height: 25px;position: absolute;right: 5px;top: 7px;" src="../img/right.png"/>
+				 		</div>				 		   
+					</div> 			  		
+				</div>
+				<div class="line1" onclick="muiOpenPage('chooseAdress.html')" style="background: white;clear: both;">
+					<div class="lineCenter" style="height: 40px">
+				 		<div class="left" style="float: left;width: 25%;border-right:1px solid #ECECEC;height: 30px;margin-top: 5px;line-height: 30px;text-align: center;color:#4661A7 ;font-size: 14px;">
+				 			地址
+				 		</div><!---->
+				 		<div class="" style="float: left;width: 75%;display: block;position: relative;">
+				 			<p type="text" class="address"  style="width: 90%;text-align: right;color: #4C4C4C;padding: 10px 10px 10px 0;" >大学城区域.贵州名族大学</p>
+				 			<img style="height: 25px;position: absolute;right: 5px;top: 7px;" src="../img/right.png"/>
+				 		</div>				 		
+					</div> 					
+				</div>				
+			</div>
+			<div class="sbmit mui-content-padded" style="padding-top: 100px">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" style="">提交</button>
+			</div>
 		</div>
-		
+		<script type="text/javascript" src="js/CCmui.js"></script>
 		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../public/public.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-
+		<script type="text/javascript">  
 			mui.ready(function() {
-					document.getElementById("call").addEventListener('tap', function(e) {
-						var btnArray = ['否', '是'];
-						mui.confirm('你确认拨打10086?', '驾考学霸', btnArray, function(e) {
-							if(e.index == 1) {
-								var date = '10086';
-								window.location.href = 'tel://' + date;
-							}  
-						})
-					});
-
-				})
-				//添加图片
+				$('.address').text(GetUrlParms()["address"]); 
+			})
+			//添加图片
 			function addPic(obj) {
 				var OBJ = $(obj);
 				var imgInput = $('#imgFile' + OBJ.attr('index'));
@@ -221,6 +203,11 @@
 				return url;
 			}
 
+			function muiOpenPage(url) {
+				mui.openWindow({
+					url: url
+				})
+			}
 		</script>
 	</body>
 

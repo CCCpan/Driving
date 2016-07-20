@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<style>
 			.newsShow {
-				width: 8px !important;
+				width: 8px !important;  
 				height: 10px !important;
 				border-radius: 8px !important;
 				background: #ED4C53 !important;
@@ -23,24 +23,28 @@
 				top: 6px;
 				display: block;
 				right: 42px;
-			} 
+			}
+			
 			.footerImg {
 				height: 18px;
 				width: 18px;
 				display: block;
 				margin: 0 auto;
 				margin-top: 8px !important;
-			} 
+			}
+			
 			nav,
 			nav .mui-tab-item {
 				height: 48px !important;
-			} 
+			}
+			
 			.mui-tab-label {
 				font-size: 10px;
 				display: block;
 			}
 		</style>
-	</head> 
+	</head>
+
 	<body style="">
 		<!--<header class="mui-bar mui-bar-nav ">
 			<h1 class="mui-title">驾考学霸</h1>
@@ -51,21 +55,16 @@
 				<img class="footerImg" index='1' src="img/tab11.png" />
 				<span class="mui-tab-label">学驾照</span>
 			</a>
-			<a class="mui-tab-item" href="share/index.html">
-				<img class="footerImg" index='2' src="img/tab2.png" />
-				<span class="mui-tab-label">优惠报名</span>
-			</a>
-			<a class="mui-tab-item" href="aboutMe/index.html">
-				<img class="footerImg" index='3' src="img/tab3.png" style="position: relative;"> </img>
+			<a class="mui-tab-item abloutUS"  href="aboutMe/index.html">
+				<img class="footerImg " index='2' src="img/tab2.png" style="position: relative;"> </img>
 				<!--<span style="" class="mui-badge newsShow"></span>-->
-				<span class="mui-tab-label">
+				<span class="mui-tab-label ">
 					我的
 				</span>
 			</a>
 		</nav>
 		<div class="mui-content" style="padding-top: 0px;">
 			<iframe src="share/index.html" width="" height="" style="display: none;"></iframe>
-			<iframe src="contactList/index.html" width="" height="" style="display: none;"></iframe>
 			<iframe src="aboutMe/index.html" width="" height="" style="display: none;"></iframe>
 		</div>
 		<div id="choseeMune_add" class="add_Chose" style="opacity: 0">
@@ -86,9 +85,9 @@
 				<img style="" src="img/chose4.png" /><br>聚团购
 			</div>
 		</div>
-		<div class="choseeMune_footer add_Chose" style="opacity: 0"> 
+		<div class="choseeMune_footer add_Chose" style="opacity: 0">
 			<img style="" src="img/t1index4.png" />
-		</div> 
+		</div>
 	</body>
 
 	<script src="public/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
@@ -102,17 +101,20 @@
 				id: 'showIframe', //子页面标志
 				styles: {
 					top: '0px',
-					bottom: '54px'
+					bottom: '48px'
 				}
 			}]
-		});  
+		}); 
 
 		mui.ready(function() {
-				mui('nav').on('tap', 'a', function() { 
-					footerClick(this);
-				})
-				//自适应高度
-				//	document.querySelector('#choseeMune').style.height = window.innerHeight + 'px';
+			console.log(localStorage.userInfo);
+				if(GetUrlParms()["index"] == 2) {
+					footerClick('obj','abloutus');
+					document.getElementById("showIframe").src='aboutMe/index.html';
+				}
+				mui('nav').on('tap', 'a', function() {
+						footerClick(this);
+					})
 				//添加发布却换filter
 				mui('body').on('tap', '#add', function() {
 						$('header,nav,#showIframe').addClass('filter');
@@ -137,15 +139,25 @@
 					document.getElementById("showIframe").src = this.getAttribute("href");
 				})
 			})
-		//footer点击图片却换
-		function footerClick(obj) {  
-			for(var i = 0; i < $('.footerImg').length; i++) { 
-				$('.footerImg').eq(i).attr('src', 'img/tab' + (i + 1) + '.png'); 
+			//footer点击图片却换
+		function footerClick(obj,abloutus) {
+			for(var i = 0; i < $('.footerImg').length; i++) {
+				$('.footerImg').eq(i).attr('src', 'img/tab' + (i + 1) + '.png');
+				
 			}
 			var obj = $(obj).find('.footerImg');
+			$('nav a').removeClass('mui-active');
+			if(abloutus){
+				obj = $('.abloutUS').find('.footerImg');
+				$('nav a').eq(1).addClass('mui-active');
+			}else{
+				$('nav a').eq(0).addClass('mui-active');
+			}
+			
 			obj.attr('src', 'img/tab' + obj.attr('index') + obj.attr('index') + '.png');
-		}  		
-			//muiWeb打开页面
+			
+		}
+		//muiWeb打开页面
 		function muiOpenPage(url) {
 			mui.openWindow({
 				url: url,

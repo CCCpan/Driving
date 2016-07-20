@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>驾考学霸</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -69,20 +69,19 @@
 				margin-top: 10px
 			}
 		</style>
-	</head>
-
+	</head> 
 	<body style="">
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style=""></a>
+			<a class="mui-icon mui-icon-left-nav mui-pull-left"  onclick="muiOpenPage('../index.html?index=2')"  style=""></a>
 			<h1 class="mui-title" style="">邀请学员二维码</h1>
 			<a id="add" class="mui-icon  mui-pull-right" style="">使用规则</a>
 		</header>
-		
-		<div id="" class="mui-content" style=" ">
+		   
+		<div id="" class="mui-content" style=" ">  
 			<div class="top" style="">
 				<div class="row1" style="">
 					<div class="mui-table lineCenter" style="">
-				 		<img style="" src="../img/erCode.png"/>
+				 		<div id="qrcode"></div>
 					</div> 
 				</div> 
 				<div class="row2" style="">
@@ -111,19 +110,24 @@
 		</div>
 		<script src="../public/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../public/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/jquery/jquery.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/public.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 //		car_0_phone   phone登陆手机号
 			mui.ready(function() {
 				mui.init({
 					swipeBack: false
 				});
+				makeQrcode();
 			})
-
-			function muiOpenPage(url) {
-				mui.openWindow({
-					url: url
-				})
-			}
+			function makeQrcode(){ 
+				jQuery('#qrcode').qrcode({
+				     render    : "canvas",//也可以替换为table
+				    width   : 220,
+				    height  : 220,  
+				    text    : "car_0_"+JSON.parse(localStorage.userInfo).res.res_data.phone
+				});					
+			} 
 		</script>
 	</body>
 
