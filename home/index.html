@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>美聚</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../public/fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.previewimage.css" />
+	</head>
+
+	<body>
+		<style>
+			.icon {
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+		</style>
+		<div class="mui-content" style="">
+			<div id="slider" class="mui-slider">
+				<!--	内容标题banner-->
+				<div id="sliderSegmentedControl" style="" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						聚问答
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						聚干货
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						聚活动
+					</a>
+					<a class="mui-control-item" href="#item4mobile">
+						聚团购
+					</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+				<!--顶部刷新-->
+				<div id="topLoad" style="">
+					<div class="left" style=""><span class="mui-spinner"></span></div>
+					<div class="right" style="">
+						&nbsp;&nbsp;正在刷新...
+					</div>
+				</div>
+				<!--内容banner-->
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content  mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+
+							<div id="pullrefresh" style="" class="mui-content mui-scroll-wrapper pullrefresh">
+
+								<!--<div class="mui-scroll">-->
+								<ul id="ju_question" class="mui-table-view">
+									<li class="mui-table-view-cell mui-collapse-ed">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content " style="">
+											<div class="content_question" style="">答案文摘要20字以内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="">
+												<span class="who_a" style="">@XX:</span>
+												<span>这里是问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题？</span>
+												<span class="money" style="">&nbsp;&nbsp;&nbsp;￥38</span>
+												<span class="question_a" style="">&nbsp;&nbsp;&nbsp;问@某某某</span>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i class="icon icontest iconfont clickYes ">&#xe604;&nbsp;</i>
+													<span class="yesNum">33</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+									<li class="mui-table-view-cell mui-collapse-ed">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content " style="">
+											<div class="content_question" style="">答案文摘要20字以内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="">
+												<span class="who_a" style="">@XX:</span>
+												<span>这里是问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题？</span>
+												<span class="money" style="">&nbsp;&nbsp;&nbsp;￥38</span>
+												<span class="question_a" style="">&nbsp;&nbsp;&nbsp;问@某某某</span>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i class="icon iconfont clickYes ">&#xe604;&nbsp;</i>
+													<span class="yesNum">33</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+									<li class="mui-table-view-cell mui-collapse-ed">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content " style="">
+											<div class="content_question" style="">答案文摘要20字以内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="">
+												<span class="who_a" style="">@XX:</span>
+												<span>这里是问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题？</span>
+												<span class="money" style="">&nbsp;&nbsp;&nbsp;￥38</span>
+												<span class="question_a" style="">&nbsp;&nbsp;&nbsp;问@某某某</span>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i class="icon iconfont clickYes ">&#xe604;&nbsp;</i>
+													<span class="yesNum">33</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+									<li class="mui-table-view-cell mui-collapse-ed">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content " style="">
+											<div class="content_question" style="">答案文摘要20字以内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="">
+												<span class="who_a" style="">@XX:</span>
+												<span>这里是问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题？</span>
+												<span class="money" style="">&nbsp;&nbsp;&nbsp;￥38</span>
+												<span class="question_a" style="">&nbsp;&nbsp;&nbsp;问@某某某</span>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i class="icon iconfont clickYes ">&#xe604;&nbsp;</i>
+													<span class="yesNum">33</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+
+									<li class="mui-table-view-cell mui-collapse-ed  mui-active">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index2.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">花儿姐</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content" style="">
+											<div class="content_question" style="">这打主攻公务繁忙那个
+												<div class="question_money i-want-question" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="display: none">
+											</div>
+											<!--									  		<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i style="" class="icon iconfont colorRed clickYes">&#xe604;&nbsp;</i>
+													<span class="yesNum">34</span>
+
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell mui-collapse-ed  mui-active last">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某1</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content" style="">
+											<div class="content_question" style="">答案文摘要20字以内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="">
+												<span class="who_a" style="">@XX:</span>
+												<span>这里是问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题？</span>
+												<span class="money" style="">&nbsp;&nbsp;&nbsp;￥38</span>
+												<span class="question_a" style="">&nbsp;&nbsp;&nbsp;问@某某某</span>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i style="" class="icon iconfont colorRed clickYes">&#xe604;&nbsp;</i>
+													<span class="yesNum">34</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+									<!--顶部刷新-->
+									<div id="bottonLoad" style="">
+										<div class="left" style=""><span class="mui-spinner"></span></div>
+										<div class="right" style="">
+											&nbsp;&nbsp;正在加载...
+										</div>
+
+									</div>
+									<li class="mui-table-view-cell" cc="cc">
+										&nbsp;
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content ">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<!--	<div class="mui-scroll">-->
+							<div id="pullrefresh2" class="mui-content mui-scroll-wrapper pullrefresh">
+								<ul id="ganhuo" class="mui-table-view tabItem">
+
+									<li class="mui-table-view-cell mui-collapse-ed  mui-active">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t2index6.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content " style="">
+											<div class="content_question" style="">文字默认显示20字以显示20字内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer content_answer_img_group" style="">
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index1.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index2.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index3.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index4.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index5.png" data-preview-src="" data-preview-group="1" />
+												</div>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i class="icon iconfont clickYes ">&#xe604;&nbsp;</i>
+													<span class="yesNum">33</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+
+									<li class="mui-table-view-cell mui-collapse-ed  mui-active">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t2index6.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content " style="">
+											<div class="content_question" style="">文字默认显示20字以显示20字内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer content_answer_img_group" style="">
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index1.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index2.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index3.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index4.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index5.png" data-preview-src="" data-preview-group="1" />
+												</div>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i class="icon iconfont clickYes colorRed">&#xe604;&nbsp;</i>
+													<span class="yesNum">34</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+
+									<li class="mui-table-view-cell mui-collapse-ed  mui-active">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t2index6.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content " style="">
+											<div class="content_question" style="">文字默认显示20字以显示20字内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer content_answer_img_group" style="">
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index1.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index2.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index3.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index4.png" data-preview-src="" data-preview-group="1" />
+												</div>
+												<div class="content_answer_img" style="">
+													<img src="../img/t2index5.png" data-preview-src="" data-preview-group="1" />
+												</div>
+											</div>
+											<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i class="icon iconfont clickYes colorRed">&#xe604;&nbsp;</i>
+													<span class="yesNum">34</span>
+													<a href="#picture"> <i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i></a>
+												</div>
+											</div>
+
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										&nbsp;
+									</li>
+								</ul>
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<!--<div class="mui-scroll">-->
+							<div id="pullrefresh3" class="mui-content mui-scroll-wrapper pullrefresh">
+								<ul id="huodong" class="mui-table-view tabItem" style="">
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+													<span class="label local_label" style="">仅限本地</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left mui-ellipsis" style="">￥28
+														<sapn class="amount" style="">总100/剩56</sapn>
+													</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+													<span class="label jion_label" style="">随时加入</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart colorRed">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">16</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="border-bottom: 0px;">
+										&nbsp;
+									</li>
+								</ul>
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll4" class="mui-scroll-wrapper">
+							<!--<div class="mui-scroll">-->
+							<div id="pullrefresh4" class="mui-content mui-scroll-wrapper pullrefresh">
+								<ul id="tuangou" class="mui-table-view tabItem" style="">
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+													<span class="label local_label" style="">仅限本地</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left mui-ellipsis" style="">￥28
+														<sapn class="amount" style="">总100/剩56</sapn>
+													</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+													<span class="label jion_label" style="">随时加入</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart colorRed">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">16</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+													<span class="label local_label" style="">仅限本地</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left mui-ellipsis" style="">￥28
+														<sapn class="amount" style="">总100/剩56</sapn>
+													</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">6</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li class="mui-table-view-cell " style="">
+										<div class="t3_conent">
+											<div class="left" style="">
+												<img style="" src="../img/t2index7.png" />
+											</div>
+											<div class="right" style="">
+												<p class='mui-ellipsis title box1' style="">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+												<p class='mui-ellipsis time' style="">限11.30前
+													<span class="label game_label" style="">比赛</span>
+													<span class="label jion_label" style="">随时加入</span>
+												</p>
+												<p class='mui-ellipsis adress' style="">地点：五道口肯德基</p>
+												<p class='mui-ellipsis doUser' style="">发起：@冯同学，参加冬天</p>
+												<div class='operation mui-ellipsis' style="">
+													<div class="left" style="">￥28</div>
+													<div class="right" style="">
+														<i class="mui-icon icon iconfont save_heart colorRed" style="">&#xe60b;</i>&nbsp;&nbsp;<span class="heartNum">16</span>&nbsp;&nbsp;
+														<span class="join" style="">立即参加1</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="border-bottom: 0px;">
+										&nbsp;
+									</li>
+								</ul>
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="empt" style="height: 170px;">&nbsp;</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!--	//更多菜单-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">分享</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">打赏</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/public.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			//事件初始化
+			mui.init();
+			mui.ready(function() {
+					//上下啦刷新绑定id
+					topRefresh("ju_question");
+					topRefresh("ganhuo");
+					topRefresh("huodong");
+					topRefresh("tuangou");
+					bottonRefresh();
+					//图片预览配置
+					mui.previewImage();
+					//页面高度自适应
+					document.querySelector('.mui-content').style.height = window.innerHeight + 'px';
+					mui('.mui-scroll-wrapper').scroll({
+						indicators: false //是否显示滚动条
+					});
+					//收展动画
+					mui('#ju_question,#ganhuo').on('tap', 'a', function() {
+							$(this).next().slideToggle(400);
+						})
+						//点赞
+					mui('.footer_question').on('tap', '.clickYes', function() {
+							var Obj = $(this);
+							Obj.css('font-size', '10px');
+							setTimeout(function() {
+								Obj.css('font-size', '16px');
+							}, 360)
+							Obj.toggleClass('colorRed');
+							if(Obj.hasClass('colorRed')) {
+								Obj.next().text(parseInt(Obj.next().text()) + 1);
+								mui.toast('点赞成功');
+							} else {
+								mui.toast('取消点赞成功');
+								Obj.next().text(parseInt(Obj.next().text()) - 1);
+							}
+						})
+						//收藏
+					mui('#item3mobile,#tuangou').on('tap', '.save_heart', function(e) {
+//							var Obj = $(this);
+//							Obj.css('font-size', '10px');
+//							setTimeout(function() {
+//								Obj.css('font-size', '16px');
+//							}, 360)							
+							$(this).toggleClass('colorRed');
+							if($(this).hasClass('colorRed')) {
+								$(this).next().text(parseInt($(this).next().text()) + 1);
+								mui.toast('收藏成功');
+							} else {
+								mui.toast('取消收藏成功');
+								$(this).next().text(parseInt($(this).next().text()) - 1);
+							}
+						})
+						//顶部banner却换
+					var item2 = document.getElementById('item2mobile');
+					var item3 = document.getElementById('item3mobile');
+					var item4 = document.getElementById('item4mobile');
+					document.getElementById('slider').addEventListener('slide', function(e) {
+						if(e.detail.slideNumber === 1) {
+							if(item2.querySelector('.mui-loading')) {
+								setTimeout(function() {
+									item2.querySelector('ul').style.display = 'block';
+									item2.querySelector('.mui-loading').style.display = 'none';
+								}, 500);
+							}
+						} else if(e.detail.slideNumber === 2) {
+							if(item3.querySelector('.mui-loading')) {
+								setTimeout(function() {
+									item3.querySelector('ul').style.display = 'block';
+									item3.querySelector('.mui-loading').style.display = 'none';
+								}, 500);
+							}
+						} else if(e.detail.slideNumber === 3) {
+							if(item4.querySelector('.mui-loading')) {
+								setTimeout(function() {
+									item4.querySelector('ul').style.display = 'block';
+									item4.querySelector('.mui-loading').style.display = 'none';
+								}, 500);
+							}
+						}
+					});
+				})
+				//底部加载更多
+			function bottonRefresh() {
+				document.getElementById("ju_question").addEventListener("swipeup", function() {
+					console.log("你正在向shang滑动" + '+' + $('#ju_question').children().first().offset().top);
+					if(isEleBotton($('#ju_question'), window.innerHeight - 50)) {
+						$("#bottonLoad").animate({
+							opacity: 1
+						}, 500);
+						setTimeout(function() {
+							$('#bottonLoad').css('opacity', 0);
+							var html =
+								'<li class="mui-table-view-cell mui-collapse-ed last">' +
+								'<a class="mui-navigate-right" href="#" style="">' +
+								'<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>' +
+								'<div class="userInfo" style="">' +
+								'	<div class="userName" style="">' + CCnowDateTime() + '</div><br>' +
+								'	<div class="userCome" style="">刚刚&nbsp;&nbsp;来自成都生活群</div>' +
+								'	</div>' +
+								'	</a> ' +
+								'	</li>	';
+							$('#ju_question .last').last().after(html);
+						}, 1500)
+					}
+				});
+			}
+			//头部刷新
+			function topRefresh(id) {
+				document.getElementById(id).addEventListener("swipedown", function() {
+					var obj = $(this);
+					console.log("你正在向上滑动" + '+' + obj.children().first().offset().top);
+					if(obj.children().first().offset().top > 35) {
+						$(this).parent().css('padding-top', '42px');
+						$('#topLoad').show();
+						$("#topLoad").animate({
+							opacity: 1
+						}, 500);
+						var partentOBJ = obj.parent();
+						setTimeout(function() {
+							mui.toast('刷新成功');
+							partentOBJ.css('padding-top', '0px');
+							$('#topLoad').hide();
+							$('#topLoad').css('opacity', 0);
+						}, 1500)
+					}
+				});
+			}
+			//1.得到外围元素的高度，2.页面显示区域的高度,3.第一个子元素滚过去的高度为负，正及时过去的高度
+			//4。若滚过去的高度加页面高度大于外围元素高度，则滚到页面底部
+			function isEleBotton(parentEleObj, showWindowHight) { //父元素对象，滚到内容的高度（应去除没有滚到的高度）
+				var parentEleHeight = parentEleObj.height();
+				var firstEleHeight = (-parseInt(parentEleObj.children().first().offset().top) + 100);
+				if(firstEleHeight + showWindowHight > parentEleHeight) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

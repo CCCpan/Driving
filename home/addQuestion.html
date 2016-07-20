@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">		
+		<link rel="stylesheet" type="text/css" href="../public/mui/css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/fonts/iconfont.css"/>
+		<style type="text/css">
+			header a{
+				color: #757575;
+				font-weight: bold;  
+				margin-top: 15px;
+				font-size: 16px;
+			}
+			header .mui-title{
+				font-size: 19px !important;
+			}
+			.mui-table-view:before{
+				height: 0px;
+			}
+			.textArea{
+				height: 160px;
+			}
+			.textArea .input{
+				height: 130px;
+			}
+			.textArea .input textarea{
+				border: 0px solid !important;height: 130px;font-size: 16px;padding: 15px;
+			}
+			.textArea .flooter{
+				height: 30px;background: white;padding-left: 10px;font-size: 15px;color: #777777;overflow-y: hidden;
+			}
+			.textArea .sea{
+				display: block;float: left;overflow: hidden;font-size: 13px;width: 90%;
+			}
+			.textArea img{
+				height: 18px;width: 18px;display: block;float: left;margin-top: 1px;
+			}
+			.list{
+				margin-top: 10px;
+			}
+			.list .mui-table-view-cell .mui-navigate-right{
+				color: #838383;position: relative;font-weight: 700;font-size: 14px;
+			}
+			.list .mui-table-view-cell .money{
+				color: red;position: absolute;right:45px;top: 13px;
+			}
+			.list .mui-table-view-cell .xianshi{
+				color: #A1A1A1;position: absolute;right:45px;top: 13px;
+			}
+			.share{
+				padding-left: 15px;font-size: 33px;color: #C6C6C6;padding-top: 10px;
+			}
+			.sbmit{
+				position: absolute;bottom: 24px;width: 95%;
+			}
+			.sbmit button{
+				background: #F15A5A;border: #F15A5A;height: 40px;line-height: 40px;text-align: center;padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a onclick="muiOpenPage('../index.html')"  class=" mui-pull-left" style="">取消</a>
+		    <h1 class="mui-title">发布问题</h1>
+		</header>
+		<div class="mui-content" style="">   
+			<div class="textArea" style="">
+				 <div class="input" style="">
+				 	<textarea style=""  placeholder="向朋友热情提问，一起玩耍起来..."></textarea>
+				 </div>
+				 <div class="mui-ellipsis flooter" style="">
+				 	<img style="" src="../img/t2index6.png" />
+			      	<span class="mui-ellipsis sea" style="">&nbsp;&nbsp;公开提问,答案每次被人围观1次,你从中分成0.5元</span>
+				 </div>
+			</div>
+			<div class="list" style="">
+				<ul id="list" class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell" style="">
+						
+						<a class="mui-navigate-right" style="" href="">
+							设定价格
+						</a>  
+						<a class="money" style="">￥100</a>
+					</li>	
+					<li class="mui-table-view-cell" style="">
+						
+						<a class="mui-navigate-right" style="" href="">
+							时间限定
+						</a>  
+						<a class="xianshi" style="">限时24小时</a>
+					</li>	
+					<li class="mui-table-view-cell" style="">
+						
+						<a class="mui-navigate-right" style="" href="">
+							指定文人
+						</a>  
+						<a class="xianshi" style="">默认公开</a>
+					</li> 
+				</ul> 
+				<div class="share" style="">
+					<i class="mui-icon icon iconfont" style="font-size: 21px;">&#xe60a;</i>
+					<i class="mui-icon icon iconfont" style="font-size: 18px;">&#xe608;</i>
+					<i class="mui-icon icon iconfont" style="font-size: 18px;">&#xe609;</i>
+				</div>
+			</div> 
+			<div class="sbmit mui-content-padded" style="">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" style="">确认发布</button>
+			</div>
+		</div> 
+		<script src="../public/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+					function muiOpenPage(url) {
+				mui.openWindow({
+					url: url
+				})
+			}	
+		</script>
+	</body>
+</html>

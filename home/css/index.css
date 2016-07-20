@@ -1,0 +1,488 @@
+			.mui-control-content {
+				background-color: white;
+				min-height: 215px;
+			}
+			#item3mobile .mui-active,#item4mobile .mui-active{
+				background: none !important;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			
+			.tabItem {
+				display: none;
+			}
+			#slider{
+				background: #F2F2F2 !important;
+			}
+			#slider,
+			.mui-slider-group {
+				height: 100% !important;
+			}
+			
+			#sliderProgressBar {
+				background-color: #F15A5A !important;
+				width: 20% !important;
+				margin-left: 10% !important;
+			}
+			
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #F15A5A !important;
+				
+			}
+			.mui-segmented-control .mui-control-item{
+				line-height: 36px !important;  
+			}
+			#sliderSegmentedControl {
+				width: 80%;
+				margin: 0 auto;
+			}
+			/*#sliderSegmentedControl a{color: #4A4A4A !important;}*/
+			
+			.mui-collapse {
+				background: white !important;
+				margin-bottom: 10px;
+			}
+			/*item*/
+			
+			.mui-collapse-ed {
+				background: white !important;
+				margin-bottom: 10px;
+			}
+			
+			.mui-table-view-cell.mui-collapse-ed .mui-navigate-right .userImg {
+				display: inline-block;
+				height: 42px;
+			}
+			
+			.mui-table-view-cell.mui-collapse-ed .mui-navigate-right .userImg img {  
+				height: 36px;
+				width: 36px; 
+			}
+			#ju_question .mui-table-view-cell,#ganhuo .mui-table-view-cell{
+				padding: 5px 15px 0 15px !important;
+			}
+			.mui-table-view-cell.mui-collapse-ed .mui-navigate-right .userInfo {
+				display: inline-block;
+				height: 40px;
+			}
+			
+			.mui-table-view-cell.mui-collapse-ed .mui-navigate-right .userInfo .userName {
+				display: block;
+				float: left;
+				height: 18px;
+				line-height: 18px;
+				text-align: left;
+				font-size: 17px !important;
+				font-weight: bold;
+				color: #4A4A4A;
+				text-indent: 3px;
+			}
+			
+			.mui-table-view-cell.mui-collapse-ed .mui-navigate-right .userInfo .userCome {
+				margin-top: -3px !important;
+				display: block;
+				float: left;
+				height: 22px;
+				line-height: 22px;
+				font-size: 12px !important;
+				color: #B7B7B7;
+				text-indent: 4px;
+			}
+			
+			.mui-collapse-content {
+				padding-top: 0px;
+			}
+			
+			.mui-collapse-content .content_question {
+				font-size: 18px;
+				color: #4A4A4A !important;
+			}
+			
+			.mui-collapse-content .content_question .question_money {
+				display: inline-block;
+				background: #F15A5A;
+				color: white;
+				padding: 0 8px;
+				border-radius: 5px;
+				font-size: 15px;
+				margin-top: 7px;
+				line-height: 25px;
+			}
+			
+			.mui-collapse-content .content_answer {
+				background: #F9F9F9;
+				padding: 10px;
+				color: #4A4A4A !important;
+				margin: 5px 0 0 0;
+			}
+			
+			.mui-collapse-content .content_answer .who_a {
+				color: #455985
+			}
+			
+			.mui-collapse-content .content_answer .money {
+				color: #F15A5A;
+			}
+			
+			.mui-collapse-content .content_answer .question_a {
+				color: #4A4A4A;
+			}
+			
+			.mui-collapse-content .footer_question .left {
+				float: left;
+				line-height: 33px;
+				width: 70%;
+				font-size: 13px;
+				color: #9B9B9B;
+			}
+			
+			.mui-collapse-content .footer_question .right {
+				float: left;
+				line-height: 33px;
+				width: 30%;
+				text-align: right;
+				color: #9B9B9B;
+				height: 33px;
+			}
+			
+			.mui-slider-group .mui-table-view-cell:after {
+				height: 0px !important;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				margin: 0px -15px !important;
+			}
+			
+			.mui-collapse-ED {
+				background: white !important;
+				margin-bottom: 10px;
+			}
+			
+			.hide {
+				width: 0;
+				transition: width 2s;
+				-moz-transition: width 2s;
+				/* Firefox 4 */
+				-webkit-transition: width 2s;
+				/* Safari and Chrome */
+				-o-transition: width 2s;
+				/* Opera */
+			}
+			
+			.mui-navigate-right:after,
+			.mui-push-right:after {
+				-moz-transform: rotate(270deg);
+				-webkit-transform: rotate(-270deg);
+				top: 20% !important;
+			}
+			
+			.clickShow {}
+			
+			.colorRed {
+				color: red;
+			}
+			
+			.i-want-question {
+				background: #00CD7E !important;
+			}
+			
+			#picture .mui-table-view-cell>a:not(.mui-btn) {
+				margin: -11px -15px !important;
+			}
+			
+			.footer_question .right a {
+				color: #9B9B9B !important;
+			}
+			
+			#ju_question {
+				margin-top: 0px;
+			}
+			
+			.mui-pull-bottom-pocket {
+				bottom: 52px !important;
+			}
+			
+			#item2mobile .content_answer_img_group {
+				padding: 0px !important;
+				background: white !important;
+			}
+			
+			#item2mobile .content_answer_img {
+				width: 33.33333%;
+				padding: 2px 5px;
+				float: left;
+				text-align: right; 
+			}
+			
+			#item2mobile .content_answer_img img {
+				width: 100%;
+				height: 98px;
+			}
+			
+			.footer_question {
+				clear: both;
+			}
+			
+			#ganhuo {
+				background: #F2F2F2 !important;
+			}
+			
+			#sliderProgressBar {
+				height: 2px !important;
+			}
+			
+			#huodong .mui-table-view-cell {
+				border-bottom: 1px solid #CDCDCD;
+				margin-left: 17px;
+				text-indent: 0px;
+				padding-left: 0px !important;
+			}
+			
+			#huodong .mui-table-view-cell .left {
+				width: 25%;
+				height: 105px;
+				float: left;
+			}
+			
+			#huodong .mui-table-view-cell .left img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#huodong .mui-table-view-cell .right {
+				width: 75%;
+				height: 105px;
+				float: left;
+				padding-left: 9px;
+				padding-top: 2px;
+			}
+			
+			#huodong .mui-table-view-cell .right .title {
+				color: #4A4A4A;
+				font-size: 17px;
+				font-weight: bold;
+			}
+			
+			#huodong .mui-table-view-cell .right .time {
+				color: #F15A5A;
+				font-size: 11px;
+			}
+			
+			#huodong .mui-table-view-cell .right .time .label {
+				display: inline-block;
+				color: white;
+				font-size: 10px;
+				padding: 0px 5px;
+				border-radius: 2px;
+				line-height: 14px;
+				text-align: center !important;
+			}
+			
+			.game_label {
+				background: #44D6DD;
+			}
+			
+			#huodong .mui-table-view-cell .right .adress {
+				color: #9D9D9D;
+				font-size: 11px;
+				line-height: 16px;
+			}
+			
+			#huodong .mui-table-view-cell .right .doUser {
+				color: #9D9D9D;
+				font-size: 11px;
+			}
+			
+			#huodong .mui-table-view-cell .right .operation {
+				padding-top: 2px;
+			}
+			
+			#huodong .mui-table-view-cell .right .operation .left {
+				float: left;
+				width: 50%;
+				color: #F15A5A;
+				font-size: 18px;
+				margin-top: 3px;
+			}
+			
+			#huodong .mui-table-view-cell .right .operation .right {
+				float: left;
+				width: 50%;
+				text-align: right;
+				margin-top: -5px;
+			} 
+			#huodong .mui-table-view-cell .right .operation .right .join {
+				display: inline-block;
+				background: #F15A5A;
+				color: white;
+				font-size: 12px;
+				padding: 2px 5px;
+				border-radius: 4px;
+			}
+			
+			#tuangou .mui-table-view-cell {
+				border-bottom: 1px solid #CDCDCD;
+				margin-left: 17px;
+				text-indent: 0px;
+				padding-left: 0px !important;
+			}
+			
+			#tuangou .mui-table-view-cell .left {
+				width: 25%;
+				height: 105px;
+				float: left;
+			}
+			
+			#tuangou .mui-table-view-cell .left img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#tuangou .mui-table-view-cell .right {
+				width: 75%;
+				height: 105px;
+				float: left;
+				padding-left: 9px;
+				padding-top: 2px;
+			}
+			
+			#tuangou .mui-table-view-cell .right .title {
+				color: #4A4A4A;
+				font-size: 17px;
+				font-weight: bold;
+			}
+			
+			#tuangou .mui-table-view-cell .right .time {
+				color: #F15A5A;
+				font-size: 11px;
+			}
+			
+			#tuangou .mui-table-view-cell .right .time .label {
+				display: inline-block;
+				color: white;
+				font-size: 10px;
+				padding: 0px 5px;
+				border-radius: 2px;
+				line-height: 14px;
+				text-align: center !important; 
+			}
+			
+			#tuangou .mui-table-view-cell .right .adress {
+				color: #9D9D9D;
+				font-size: 11px;
+				line-height: 16px;
+			}
+			
+			#tuangou .mui-table-view-cell .right .doUser {
+				color: #9D9D9D;
+				font-size: 11px;
+			}
+			
+			#tuangou .mui-table-view-cell .right .operation {
+				padding-top: 2px;
+			}
+			
+			#tuangou .mui-table-view-cell .right .operation .left {
+				float: left;
+				width: 50%;
+				color: #F15A5A;
+				font-size: 18px;
+				margin-top: 3px;
+			}
+			
+			#tuangou .mui-table-view-cell .right .operation .right {
+				float: left;
+				width: 50%;
+				text-align: right;
+				margin-top: -2px;
+			}
+			#huodong .mui-table-view-cell .right .operation .right .join,#tuangou .mui-table-view-cell .right .operation .right .join{
+				font-weight: bold !important;
+			}
+			#tuangou .mui-table-view-cell .right .operation .right .join {
+				display: inline-block;
+				background: #F15A5A;
+				color: white;
+				font-size: 12px;
+				padding: 2px 5px;
+				border-radius: 4px;
+			}
+			
+			#sliderSegmentedControl {
+				background: #F2F2F2 !important;
+			}
+			
+			.local_label {
+				background: #78A0F2;
+			}
+			
+			.jion_label {
+				background: #A8E067;
+			}
+			
+			#huodong .mui-table-view-cell .right .operation .left .amount {
+				color: #9D9D9D;
+				font-size: 15px;
+				display: inline-block;
+				line-height: 23px;
+				margin-top: -3px;
+				text-align: center;
+			}
+			.topLoadShowHight {
+				padding-top: 42px;
+			}
+			
+			.topLoadHideHight {
+				padding-top: ;
+			}
+			
+			#topLoad {
+				position: fixed;
+				top: 36px;
+				z-index: 1;
+				line-height: 50px;
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				display: none;
+				opacity: 0;
+			}
+			
+			#bottonLoad { 
+				z-index: 1;
+				line-height: 50px;
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				margin-top: -10px;
+				/*display: none;*/
+				opacity: 0;
+			}
+			
+			#topLoad .left,
+			#bottonLoad .left {
+				float: left;
+				width: 45%;
+				text-align: right;
+				margin-top: 6px;
+			}
+			
+			#topLoad .right,
+			#bottonLoad .right {
+				float: left;
+				width: 55%;
+				text-align: left;
+				color: #777777;
+				font-size: 15px;
+			}
+			
+			.mui-slider-group ul {
+				background: #F2F2F2;
+			}
+			
+			#ganhuo,
+			#tuangou,
+			#huodong {
+				margin-top: 0px !important;
+			}			

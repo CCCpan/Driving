@@ -1,0 +1,53 @@
+.mui-bar.mui-bar-nav {
+	background: white !important;
+}
+
+.mui-bar.mui-bar-nav .mui-title {
+	font-size: 17px;
+	color: #4A4A4A; 
+	line-height: 48px !important;
+}
+
+.mui-bar.mui-bar-nav .mui-icon {
+	padding-top: 4px !important;
+	font-size: 37px;
+	font-weight: normal;
+	color: #4F6BAD;
+	padding-right: 5px;
+}
+
+.hide {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+.bgYellow {
+	background: yellow !important;
+}
+
+.bgRed {
+	background: red;
+}
+
+.floatLeft {
+	float: left !important;
+}
+
+.floatRight {
+	float: right !important;
+}
+
+.mui-content {
+	background: white !important;
+}
+
+body {
+	background: white;
+}
+
+.lineCenter {
+	text-align: center;
+}

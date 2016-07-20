@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../public/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<style type="text/css">
+			.mui-bar.mui-bar-nav{
+				background: white !important;
+				
+			}
+			.mui-title,.mui-action-back{
+				color: #4361A7 !important;
+			}
+			.mui-action-back{
+				font-size: 29px !important;
+				
+			}
+		</style>
+	</head>  
+
+	<body style=""> 
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="padding-top: 0px !important;"></a>
+			<h1 class="mui-title" style="">学员登陆</h1> 
+		</header>  
+		<div class="mui-content" style=" ">
+			<div class="top" style="height: 72%;">
+				<div class="row login">
+					<div class="mui-table" style="">
+						<div class="left" style="">
+							<div class="box mui-ellipsis" style=""><img style="" src="../img/login1.png" /><span style="">&nbsp;&nbsp;手机号</span></div>
+						</div>
+						<div class="right " style="">
+							<input type="tel" style="" name="" id="" value="" placeholder="请输入手机号" />
+						</div>
+					</div>
+				</div>
+				<div class="row login">
+					<div class="mui-table" style="">
+						<div class="left" style="">
+							<div class="box mui-ellipsis" style=""><img style="" src="../img/login2.png" /><span style="">&nbsp;&nbsp;密码</span></div>
+						</div>
+						<div class="right" style="">
+							<input type="text" style="" name="" id="" value="" placeholder="请输入密码" />
+						</div>
+					</div>
+				</div>
+	
+			</div>
+			<div class="botton " style="height: 28%;">
+				<div class="row clickLogin" style="">
+						<button style="background: #4361A7" type="button" class="mui-btn mui-btn-block">登陆</button> 
+				</div>
+			</div>
+		</div>
+		<script src="../public/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.ready(function() {
+				mui.init({
+					swipeBack: false
+				});
+			})
+
+			function muiOpenPage(url) {
+				mui.openWindow({
+					url: url,
+					 show:{
+					      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+					      aniShow:'slide-in-right',//页面显示动画，默认为”slide-in-right“；
+					      duration:1000//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					  }  
+					   				
+				})
+			}
+		</script>
+	</body>
+
+</html>

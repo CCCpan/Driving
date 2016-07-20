@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../public/fonts/iconfont.css"/>
+	</head>
+
+	<body>
+
+		<style>
+			.mui-control-content {
+				background-color: white;
+				min-height: 215px;
+			}
+			
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			
+			.tabItem {
+				display: none;
+			}
+			
+			#slider,
+			.mui-slider-group {
+				height: 100% !important;
+			}
+			#sliderProgressBar{  
+				background-color: #F15A5A !important;
+				width: 20% !important;
+				margin-left: 10% !important;
+			}   
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				color: #F15A5A !important;
+			}
+			#sliderSegmentedControl{  
+				width: 80%;margin: 0 auto;
+			}
+			/*#sliderSegmentedControl a{color: #4A4A4A !important;}*/
+			.mui-collapse {
+				background: white !important;
+				margin-bottom: 10px;
+			}
+			/*item*/
+			.mui-table-view-cell.mui-collapse .mui-navigate-right .userImg{
+				display: inline-block; height: 42px;
+			}
+			.mui-table-view-cell.mui-collapse .mui-navigate-right .userImg img{
+				height: 42px;width: 42px;
+			}
+			.mui-table-view-cell.mui-collapse .mui-navigate-right .userInfo{
+				display: inline-block;height: 40px;
+			}
+			.mui-table-view-cell.mui-collapse .mui-navigate-right .userInfo .userName{
+				display: block;float: left;height: 18px;line-height: 18px;text-align: left;font-size: 17px !important;font-weight:bold ;color: #4A4A4A;text-indent: 3px;
+			}
+			.mui-table-view-cell.mui-collapse .mui-navigate-right .userInfo .userCome{
+				margin-top: -3px !important;display: block;float: left;height: 22px;line-height: 22px;font-size: 12px !important;color: #B7B7B7;text-indent: 4px;
+			}
+			.mui-collapse-content{
+				padding-top: 0px;
+			}
+			.mui-collapse-content .content_question {
+				font-size: 18px;color: #4A4A4A !important;
+			}
+			.mui-collapse-content .content_question .question_money{
+				display: inline-block;background: #F15A5A;color: white;padding: 0 8px;border-radius:5px ;font-size: 15px;margin-top: 7px;line-height: 25px;
+			}
+			.mui-collapse-content .content_answer{
+				background: #F9F9F9;padding: 10px;color: #4A4A4A !important;margin: 10px 0;
+			}
+			.mui-collapse-content .content_answer .who_a{
+				color: #455985
+			}
+			.mui-collapse-content .content_answer .money{
+				color: #F15A5A;
+			}
+			.mui-collapse-content .content_answer .question_a{
+				color:  #4A4A4A;
+			}
+			.mui-collapse-content .footer_question .left{
+				float: left;line-height: 33px;width: 70%;font-size: 13px;color: #9B9B9B;
+			}
+			.mui-collapse-content .footer_question .right{
+				float: left;line-height: 33px;width: 30%;text-align: right;color: #9B9B9B;
+			}
+			.mui-table-view-cell:after{height: 0px !important;}
+			#slider{
+				/*position: fixed; 
+				z-index: 11;*/
+			}
+		</style>
+		<!--<header class="mui-bar mui-bar-nav" style="">    
+			
+			<h1 class="mui-title">美聚</h1>  
+			<a class="mui-icon mui-icon-plusempty mui-pull-right" style=""></a>
+		</header>-->
+		<div class="mui-content" style="">
+			
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" style="" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						聚问答 
+					</a>  
+					<a class="mui-control-item" href="#item2mobile">
+						聚干货 
+					</a>  
+					<a class="mui-control-item" href="#item3mobile">  
+						聚活动
+					</a>
+					<a class="mui-control-item" href="#item4mobile">
+						聚团购
+					</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active" >
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view" style="background: #F2F2F2;">
+									<li class="mui-table-view-cell mui-collapse  mui-active">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;&nbsp;&nbsp;来自成都生活群</div>
+											</div>	
+										</a>  
+										<div class="mui-collapse-content" style="">
+											<div class="content_question" style="">答案文摘要20字以内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="">
+												<span class="who_a" style="">@XX:</span>
+												<span>这里是问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题？</span>
+												<span class="money" style="">&nbsp;&nbsp;&nbsp;￥38</span>
+												<span class="question_a" style="">&nbsp;&nbsp;&nbsp;问@某某某</span>
+											</div>
+<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">  
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i style="" class="icon iconfont ">&#xe604;&nbsp;</i>
+													<span class="yesNum">33</span> 
+													<i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i>
+												</div> 
+											</div>
+										    
+										</div>
+									</li> 
+									  
+									
+								<li class="mui-table-view-cell mui-collapse  mui-active">
+										<a class="mui-navigate-right" href="#" style="">
+											<div class="userImg" style=""><img style="" src="../img/t1index1.png"></div>
+											<div class="userInfo" style="">
+												<div class="userName" style="">某某某</div><br>
+												<div class="userCome" style="">刚刚&nbsp;&nbsp;&nbsp;&nbsp;来自成都生活群</div>
+											</div>	
+										</a>  
+										<div class="mui-collapse-content" style="">
+											<div class="content_question" style="">答案文摘要20字以内答案文摘要20字以内
+												<div class="question_money" style="">￥12&nbsp;&nbsp;我要看</div>
+											</div>
+											<div class="content_answer" style="">
+												<span class="who_a" style="">@XX:</span>
+												<span>这里是问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题？</span>
+												<span class="money" style="">&nbsp;&nbsp;&nbsp;￥38</span>
+												<span class="question_a" style="">&nbsp;&nbsp;&nbsp;问@某某某</span>
+											</div>
+<!--											<p class="mui-ellipsis" style="font-size: 18px;color: #4A4A4A !important;">h1.h1. Headingh1. Headingh1. Heading Heading</p>-->
+											<div class="footer_question">  
+												<div class="left" style="">
+													<span class="aplayNum">3人付费</span>&nbsp;&nbsp;
+													<span class="heheNum">5人呵呵</span>
+												</div>
+												<div class="right" style="">
+													<i style="" class="icon iconfont ">&#xe604;&nbsp;</i>
+													<span class="yesNum">33</span> 
+													<i style="" class="icon iconfont ">&nbsp;&nbsp;&#xe605;</i>
+												</div> 
+											</div>
+										 
+										</div>
+									</li> 
+								 	 
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view tabItem">
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-11
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-2
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-6
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-7
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-8
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-9
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-10
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-11
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-12
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-13
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-14
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-15
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-16
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-17
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-18
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-19
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-20
+									</li>
+								</ul>
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view tabItem">
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-113
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-2
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-6
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-7
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-8
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-9
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-10
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-11
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-12
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-13
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-14
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-15
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-16
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-17
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-18
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-19
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-20
+									</li>
+									<li class="mui-table-view-cell">
+										&nbsp;
+									</li>	
+															
+								</ul>
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll4" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view tabItem">
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-14
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-2
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-6
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-7
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-8
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-9
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-10
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-11
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-12
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-13
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-14
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-15
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-16
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-17
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-18
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-19
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-20
+									</li>
+								</ul>
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="empt" style="height: 170px;">&nbsp;</div>
+				</div>
+			</div>
+  
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script src="../public/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function() {
+				mui('.mui-collapse').on('tap','.mui-navigate-right',function(){
+					console.log(1111);
+					return
+				})
+				
+				$('.mui-content').css('height', $(window).height() + 'px');
+				mui.init({
+					swipeBack: false
+				});
+				mui('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var item2 = document.getElementById('item2mobile');
+				var item3 = document.getElementById('item3mobile');
+				var item4 = document.getElementById('item4mobile');
+				document.getElementById('slider').addEventListener('slide', function(e) {
+					if(e.detail.slideNumber === 1) {
+						if(item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('ul').style.display = 'block';
+								item2.querySelector('.mui-loading').style.display = 'none';
+							}, 500);
+						}
+					} else if(e.detail.slideNumber === 2) {
+						if(item3.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item3.querySelector('ul').style.display = 'block';
+								item3.querySelector('.mui-loading').style.display = 'none';
+							}, 500);
+						}
+					} else if(e.detail.slideNumber === 3) {
+						if(item4.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item4.querySelector('ul').style.display = 'block';
+								item4.querySelector('.mui-loading').style.display = 'none';
+							}, 500);
+						}
+					}
+				});
+			})
+		</script>
+
+	</body>
+
+</html>

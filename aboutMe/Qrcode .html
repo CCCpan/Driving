@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../public/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<style type="text/css">
+			#forgetPws .login .mui-table .left {
+				width: 31%;
+			}
+			
+			#forgetPws .login .mui-table .right {
+				width: 69%;
+			}
+			
+			.lineTitle {
+				font-size: 14px;
+				color: #797979;
+				height: 20px !important;
+				padding-top: 5px;
+			}
+			
+			.lineTime {
+				font-size: 13px;
+				color: #9B9B9B;
+			}
+			.mui-col-xs-8{
+				padding-top: 6px;display:block;float: left;
+			}
+			.mui-col-xs-4 {
+				display:block;padding-top: 10px;float: right;text-align: right;
+			}
+			.mui-col-xs-4 img{
+				height: 20px;width: 40px;margin-top:5px ;
+			}
+			body,#forgetPws{
+				background: #FFFFFF !important;
+			}
+			.top{
+				background: #FFFFFF;
+			}
+			#add{
+				font-size: 14px;top: 16px;color: #4661A7;
+			}
+			.mui-table{border: 0px !important;}
+			.row1{
+				margin: 35px 0;
+			}
+			.row1 img{
+				height: 220px;width: 220;
+			}
+			.row2{
+				font-size: 15px;font-weight: bold;
+			}
+			.row2 p{
+				font-size: 15px;margin-bottom: 0px;
+			}
+			.row3{
+				height: 1px;background: #CBCBCB;margin: 25px 10px 25px 10px;
+			}
+			.row4{
+				margin-top: 10px
+			}
+		</style>
+	</head>
+
+	<body style="">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style=""></a>
+			<h1 class="mui-title" style="">邀请学员二维码</h1>
+			<a id="add" class="mui-icon  mui-pull-right" style="">使用规则</a>
+		</header>
+		
+		<div id="" class="mui-content" style=" ">
+			<div class="top" style="">
+				<div class="row1" style="">
+					<div class="mui-table lineCenter" style="">
+				 		<img style="" src="../img/erCode.png"/>
+					</div> 
+				</div> 
+				<div class="row2" style="">
+					<div class="mui-table lineCenter" style="">
+				 		<p style="" >你可以通过微信扫一扫</p>
+				 		<p  style="">与朋友分享报名礼包</p>	
+					</div> 
+				</div> 				
+				<div class="row3" style=""></div> 					
+				<div class="row4 row2" style="">
+					<div class="mui-table lineCenter" style="">
+				 		<p style="" >或者点击下方按钮</p>
+				 		<p  style="">发送礼包信息给朋友</p>	
+					</div> 
+				</div> 				
+				<div class="row4" style="">
+					<div class="left floatLeft" style="width: 47%;text-align: right;">
+						<img style="width: 42px;height: 42px;" src="../img/wx.png"/>
+					</div>
+					<div class="left floatRight" style="width: 47%;">
+						<img style="width: 42px;height: 42px;" src="../img/pyq.png"/>
+					</div>					
+				</div> 						
+	
+			</div> 
+		</div>
+		<script src="../public/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//		car_0_phone   phone登陆手机号
+			mui.ready(function() {
+				mui.init({
+					swipeBack: false
+				});
+			})
+
+			function muiOpenPage(url) {
+				mui.openWindow({
+					url: url
+				})
+			}
+		</script>
+	</body>
+
+</html>
